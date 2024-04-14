@@ -3,6 +3,7 @@ import { getDictionary } from "./dictionaries/dictionaries";
 import { getMovies } from "./loadMoviesData/loadMoviesData";
 import Footer from "@/components/Footer";
 import Aside from "@/components/Aside";
+import Header from "@/components/Header";
 
 export const metadata = {
   title: "Home Page",
@@ -16,6 +17,7 @@ export default async function Home({ params: { lang } }) {
 
   return (
     <>
+      <Header />
       <div className="container grid lg:grid-cols-[218px_1fr] gap-[3.5rem]">
         <Aside lang={lang} />
 
