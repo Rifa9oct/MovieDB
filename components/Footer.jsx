@@ -1,4 +1,4 @@
-import { getDictionary } from "../dictionaries/dictionaries";
+import { getDictionary } from "@/app/[lang]/dictionaries/dictionaries";
 
 const Footer = async({lang}) => { 
     const dict = await getDictionary(lang);

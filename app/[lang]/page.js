@@ -1,4 +1,4 @@
-import MovieCard from "./components/MovieCard";
+import MovieCard from "@/components/MovieCard";
 import { getDictionary } from "./dictionaries/dictionaries";
 import { getMovies } from "./loadMoviesData/loadMoviesData";
 
@@ -9,6 +9,9 @@ export const metadata = {
 
 export default async function Home({params: { lang }}) {
   const dict = await getDictionary(lang);
+  const response = await fetch("http://localhost:3000/api/movies");
+  const photos = await response.json();
+  console.log("hello");
 
   const movies = await getMovies();
   const { results } = movies;

@@ -5,7 +5,7 @@ import newRelease from "../components/gallery/newRelease.svg";
 import commingSoon from "../components/gallery/commingSoon.svg";
 import favourite from "../components/gallery/favourite.svg";
 import watchLater from "../components/gallery/watchLater.svg";
-import { getDictionary } from "../dictionaries/dictionaries";
+import { getDictionary } from "@/app/[lang]/dictionaries/dictionaries";
 
 const Aside = async ({lang}) => {
     const dict = await getDictionary(lang);
