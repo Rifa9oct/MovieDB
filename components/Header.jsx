@@ -4,6 +4,7 @@ import logo from "../components/gallery/logo.svg";
 import ring from "../components/gallery/ring.svg";
 import sun from "../components/gallery/sun.svg";
 import shoppingCart from "../components/gallery/shopping-cart.svg";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
     return (
@@ -27,6 +28,9 @@ const Header = () => {
                     <Link className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block" href="#">
                         <Image src={shoppingCart} width={24} height={24} alt="" />
                     </Link>
+                </li>
+                <li>
+                    <LanguageSwitcher/>
                 </li>
             </ul>
         </div>
