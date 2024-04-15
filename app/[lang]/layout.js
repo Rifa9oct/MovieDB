@@ -1,10 +1,8 @@
-
-const MovieLayout = ({ children }) => {
-  return (
-    <>
-      {children}
-    </>
-  );
-};
-
-export default MovieLayout;
+export default function MovieDetailsLayout({ children, modal }) {
+    return (
+        <>
+            {modal}
+            {children}
+        </>
+    );
+}
