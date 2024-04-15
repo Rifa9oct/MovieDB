@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { middleware } from "@/middleware";
 
 const LanguageSwitcher = () => {
     const router = useRouter();
@@ -31,8 +30,6 @@ const LanguageSwitcher = () => {
         setSelectedLanguage({ ...selectedLanguage, code: lang, language: lang === 'en' ? 'English' : 'Bangla' });
         setShowManu(false);
         router.push(`/${lang}`);
-
-        middleware({ ...router, nextUrl: { pathname: `/${lang}` } }, { code: lang });
     }
 
     return (
